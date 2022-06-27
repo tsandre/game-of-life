@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { World } from 'src/app/models/world';
 
 @Component({
   selector: 'app-world',
@@ -8,10 +9,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class WorldComponent implements OnInit {
   @Input('width') width = 0;
   @Input('height') height = 0;
-  
-  constructor() { }
+
+  world: World;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.world = new World(this.width, this.height);
   }
 
 }
