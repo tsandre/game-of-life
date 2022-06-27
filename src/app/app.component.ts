@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'game-of-life';
+  width = 50;
+  height = 50;
 }
