@@ -1,5 +1,5 @@
 <div class="world">
-    <div *ngFor="let lines of world.board; let i=index">
-    <app-cell *ngFor="let cell of lines" class="cell"></app-cell>
+    <div *ngFor="let lines of world.board; let x=index">
+    <app-cell *ngFor="let cell of lines; let y=index" [cell]="cell" (click)="changeCell(x,y)"></app-cell>
     </div>
 </div>
